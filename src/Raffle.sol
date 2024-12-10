@@ -133,9 +133,9 @@ contract Raffle is VRFConsumerBaseV2Plus {
             extraArgs: VRFV2PlusClient._argsToBytes(VRFV2PlusClient.ExtraArgsV1({nativePayment: false}))
         });
 
-       uint256 requestId = s_vrfCoordinator.requestRandomWords(request);
+        uint256 requestId = s_vrfCoordinator.requestRandomWords(request);
 
-       emit RequestedRaffleWinner(requestId);
+        emit RequestedRaffleWinner(requestId);
     }
     // CEI: Checks, Effects, Interactions Pattern
 
